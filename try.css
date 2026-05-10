@@ -164,17 +164,6 @@ h1 {
     color: rgb(255, 176, 237);
 }
 
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 35px;
-    border: none;
-    background: none;
-    color: white;
-    cursor: pointer;
-}
-
 /* CONTACT SECTION */
 .contact h1 {
     color: rgb(59, 206, 255);
