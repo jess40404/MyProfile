@@ -76,11 +76,11 @@ h1 {
 }
 
 .home img, .profile img {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     border-radius: 20%; /* Makes it circular */
     object-fit: cover;
-    border: 5px solid rgba(59, 206, 255, 0.3);
+    border: 5px solid rgba(116, 53, 204, 0.384);
 }
 
 .me {
@@ -116,12 +116,8 @@ h1 {
     border-radius: 15%;
     cursor: pointer;
     object-fit: cover;
-    transition: 0.3s ease-in-out;
 }
 
-.pics img:hover {
-    transform: scale(1.1);
-}
 
 /* MODALS (JS OVERLAY) */
 .overlay {
@@ -154,6 +150,7 @@ h1 {
     font-size: 24px;
     color: rgb(117, 213, 255);
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .anime li {
