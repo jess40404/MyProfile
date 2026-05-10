@@ -72,7 +72,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px; /* Space between image and text */
+    gap: 30px; /* Space between image and text */
 }
 
 .home img, .profile img {
@@ -85,7 +85,7 @@ h1 {
 
 .me {
     list-style: none;
-    font-size: 25px;
+    font-size: 23px;
     text-align: center;
 }
 
