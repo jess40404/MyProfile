@@ -4,8 +4,8 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>My Site</title>
-    <link rel="shortcut icon" href="images/flower.png" type="image-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel='stylesheet' href='try.css'>
 </head>
 
@@ -24,7 +24,7 @@
     <section id="home" class="home">
         <h1>HOME</h1>
         <div class="h-details">
-            <img src="images/home-img.jpg" alt="home-img" width="400px" height="400px">
+            <img src="images/home-img.jpg" alt="home-img">
             <ul class="me">
                 <li>NAME:<br>Jessa Claire Ngayod</li>
                 <li>AGE:<br>19</li>
@@ -40,15 +40,14 @@
         <h1>ABOUT</h1>
         <p>Get to know more about me by clicking these pictures 👇🏻</p>
         <div class="pics">
-            <img src="images/img1.jpg" alt="Anime" id="openBtn1" width="200" height="200"></button>
-            <img src="images/img2.jpg" alt="Cats" id="openBtn2" width="200" height="200"></button>
-            <img src="images/img3.jpg" alt="Photography" id="openBtn3" width="200" height="200"></button>
+            <img src="images/img1.jpg" alt="Anime" id="openBtn1" max-width="200" height="200"></button>
+            <img src="images/img2.jpg" alt="Cats" id="openBtn2" max-width="200" height="200"></button>
+            <img src="images/img3.jpg" alt="Photography" id="openBtn3" max-width="200" height="200"></button>
         </div>
     </section>
     
     <div id="modal1" class="overlay">
         <div class="box">
-            <button id="closeBtn" class="close">×</button>
             <p>I love watching anime. Some of my favorites include:</p>
             <ul class="anime">
                 <li>One Piece</li>
@@ -62,17 +61,17 @@
 
     <div id="modal2" class="overlay">
         <div class="box">
-            <button id="closeBtn" class="close">×</button>
             <p>I have two cats named Lara (a female) and Baku (a male). Right now, Lara has 5 kittens and they are all adorable and playful!</p>
         </div>
     </div>
 
     <div id="modal3" class="overlay">
         <div class="box">
-            <button id="closeBtn" class="close">×</button>
             <p>Photography is one of my hobbies. I enjoy capturing moments and creating beautiful images. I often take photos of nature, landscapes, and my cats.</p>
         </div>
     </div>
+    
+    <div id="closeBtn"></div>
 
     <section id="contact" class="contact">
         <h1>CONTACT</h1>
@@ -87,7 +86,7 @@
     <section id="profile" class="profile">
         <h1>PROFILE</h1>
         <div class="profile-details">
-            <img src="images/profile.jpg" alt="Profile Picture" width="400" height="400">
+            <img src="images/profile.jpg" alt="Profile Picture" max-width="400" height="400">
             <p>Hi! I'm Jessa Claire Ngayod, a 19-year-old Information Technology student at ISPSC Tagudin Campus. I have a passion for technology and enjoy exploring new advancements in the field. In my free time, I love watching anime, taking care of my cats, and indulging in photography. I'm always eager to learn and grow in my career, and I'm excited to see where my journey in IT takes me!</p>
         </div>
     </section>
