@@ -194,6 +194,7 @@ h1 {
 .fa-facebook { background: #3B5998; color: white; }
 .fa-instagram { background: #cf20b5; color: white; }
 .tiktok { background: #000; color: white; }
+.fa:hover, .tiktok:hover { transform: translateY(-5px); }
 
 /* PROFILE SECTION */
 .profile h1 {
