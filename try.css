@@ -85,12 +85,13 @@ h1 {
 
 .me {
     list-style: none;
-    font-size: 21px;
+    font-size: 25px;
+    text-align: center;
 }
 
 .me li {
     color: aqua;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 /* ABOUT SECTION */
@@ -194,6 +195,7 @@ h1 {
 .fa-facebook { background: #3B5998; color: white; }
 .fa-instagram { background: #cf20b5; color: white; }
 .tiktok { background: #000; color: white; }
+
 .fa:hover, .tiktok:hover { transform: translateY(-5px); }
 
 /* PROFILE SECTION */
