@@ -1,22 +1,30 @@
+/* GLOBAL STYLES */
 * {
     padding: 0;
     margin: 0;
-    font-family: Berlin Sans FB;
+    box-sizing: border-box; /* Prevents padding from breaking layout width */
+    font-family: 'Berlin Sans FB', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background:
-    radial-gradient(circle at 16% 49%, rgba(188, 22, 249, 0.226), transparent 26%),
-    radial-gradient(circle at 87% 82%, rgba(36, 5, 239, 0.34), transparent 20%),
-    radial-gradient(circle at 70% 10%, rgba(240, 21, 149, 0.35), transparent 26%),
-    linear-gradient(0deg, #2f0a31 0%, #28043e 50%, #08013e 100%);;
+        radial-gradient(circle at 16% 49%, rgba(188, 22, 249, 0.226), transparent 26%),
+        radial-gradient(circle at 87% 82%, rgba(36, 5, 239, 0.34), transparent 20%),
+        radial-gradient(circle at 70% 10%, rgba(240, 21, 149, 0.35), transparent 26%),
+        linear-gradient(0deg, #2f0a31 0%, #28043e 50%, #08013e 100%);
+    min-height: 100vh;
+    color: white;
 }
 
-/* HEADER */
-
+/* HEADER & NAVIGATION */
 header {
     position: sticky;
     top: 0;
+    z-index: 1000; /* Keeps nav above other elements */
 }
 
 .tabs {
@@ -26,11 +34,10 @@ header {
 .links {
     display: flex;
     justify-content: center;
-    text-align: center;
+    list-style: none;
 }
 
 .links li {
-    list-style: none;
     padding: 25px;
     font-size: 19px; 
 }
@@ -38,97 +45,94 @@ header {
 .links li a {
     text-decoration: none;
     color: rgb(120, 251, 196);
+    transition: 0.3s;
 }
 
+.links li a:hover {
+    color: white;
+}
+
+/* SECTION BASICS */
 section {
-    padding: 3%;
+    padding: 60px 10%;
 }
 
-/* HOME */
-
-.home {
-    justify-content: center;
-    align-items: center;
-}
-
-.home h1 {
+h1 {
     text-align: center;
     font-size: 50px;
-    background-color: transparent;
-    color:rgb(59, 206, 255)
+    margin-bottom: 30px;
+}
+
+/* HOME SECTION */
+.home h1 {
+    color: rgb(59, 206, 255);
 }
 
 .h-details {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    gap: 40px; /* Space between image and text */
 }
 
-.home img {
-    border-radius: 10%;
-    margin: 40px;
+.home img, .profile img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%; /* Makes it circular */
+    object-fit: cover;
+    border: 5px solid rgba(59, 206, 255, 0.3);
 }
 
 .me {
     list-style: none;
     font-size: 21px;
-    background-color: transparent;
 }
 
 .me li {
-    text-decoration: none;
-    color:aqua;
-    padding-top: 8px;
-    background-color: transparent;
+    color: aqua;
+    padding-top: 10px;
 }
 
-/* ABOUT */
-
-.about {
-    justify-content: center;
-    align-items: center;
-}
-
+/* ABOUT SECTION */
 .about h1 {
-    text-align: center;
     color: rgb(198, 137, 255);
-    font-size: 50px;
 }
 
 .about p {
     text-align: center;
     font-size: 25px;
-    color:rgb(255, 176, 237);
+    color: rgb(255, 176, 237);
+    margin-bottom: 20px;
 }
 
 .pics {
-    overflow: hidden;
     display: flex;
     justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .pics img {
     border-radius: 15%;
-    margin: 15px;
     cursor: pointer;
     object-fit: cover;
     transition: 0.3s ease-in-out;
 }
+
 .pics img:hover {
     transform: scale(1.1);
 }
 
-/* JS */
-
+/* MODALS (JS OVERLAY) */
 .overlay {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
 }
 
 .overlay.show {
@@ -136,58 +140,44 @@ section {
 }
 
 .box {
-   background:
-    radial-gradient(circle at 16% 49%, rgba(240, 21, 149, 0.2), transparent 26%),
-    radial-gradient(circle at 87% 82%, rgba(36, 5, 239, 0.34), transparent 20%),
-    radial-gradient(circle at 50% 10%, rgba(188, 22, 249, 0.226), transparent 16%),
-    linear-gradient(220deg, #260e23 0%, #2e0840 50%, #08013e 100%);
-  width: 90%;
-  max-width: 400px;
-  margin: 20% auto;
-  padding: 50px;
-  border-radius: 25px;
-  position: relative;
+    background: linear-gradient(220deg, #260e23 0%, #2e0840 50%, #08013e 100%);
+    width: 90%;
+    max-width: 450px;
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 25px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .box p {
-    font-size: 30px;
+    font-size: 24px;
     color: rgb(117, 213, 255);
     text-align: center;
-}
-
-.anime {
-    padding: 15px;
 }
 
 .anime li {
     padding: 5px;
     text-align: center;
     list-style: none;
-    font-size: 25px;
-    color:rgb(255, 176, 237);
+    font-size: 22px;
+    color: rgb(255, 176, 237);
 }
 
 .close {
-  position: absolute;
-  right: 20px;
-  top: 8px;
-  font-size: 30px;
-  border: none;
-  background: none;
-  cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
 }
 
-/* CONTACT */
-
-.contact {
-    justify-content: center;
-    align-items: center;
-}
-
+/* CONTACT SECTION */
 .contact h1 {
-    text-align: center;
     color: rgb(59, 206, 255);
-    font-size: 50px;
 }
 
 .contact p {
@@ -199,67 +189,84 @@ section {
 .contacts {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.fa {
+.fa, .tiktok {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 30px;
-    width: 30px;
-    text-align: center;
+    width: 60px;
+    height: 60px;
     text-decoration: none;
     border-radius: 50%;
-    margin-left: 20px;
+    transition: 0.3s;
 }
 
-.fa-facebook {
-    padding: 20px;
-    background: #3B5998;
-    color: white;
-}
+.fa-facebook { background: #3B5998; color: white; }
+.fa-instagram { background: #cf20b5; color: white; }
+.tiktok { background: #000; color: white; }
 
-.fa-instagram {
-    padding: 20px;
-    background: #cf20b5;
-    color: rgb(255, 255, 255);
-}
+.fa:hover, .tiktok:hover { transform: translateY(-5px); }
 
-.tiktok {
-    margin-left: 20px;
-    padding: 21px 23px;
-    align-content: center;
-    border-radius: 50%;
-    background: #000;
-    color: white;
-}
-
-/* PROFILE */
-
-.profile {
-    justify-content: center;
-    align-items: center;
-}
-
+/* PROFILE SECTION */
 .profile h1 {
-    text-align: center;
     color: rgb(198, 137, 255);
-    font-size: 50px;
 }
 
 .profile-details {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.profile img {
-    border-radius: 10%;
-    margin: 40px;
+    gap: 40px;
 }
 
 .profile p {
-    list-style: none;
-    font-size: 25px;
+    font-size: 22px;
     text-align: justify;
-    text-indent: 40px;
-    color:rgb(255, 176, 237);
+    line-height: 1.6;
+    color: rgb(255, 176, 237);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media screen and (max-width: 900px) {
+    .h-details, .profile-details {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile p {
+        text-align: justify;
+        text-indent: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 { font-size: 35px; }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links li {
+        padding: 10px;
+    }
+
+    .home img, .profile img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about p, .contact p, .profile p, .me {
+        font-size: 18px;
+    }
+
+    .box {
+        margin: 30% auto;
+        padding: 20px;
+    }
 }
